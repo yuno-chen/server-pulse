@@ -71,7 +71,7 @@
 | **流量统计** | **vnstat --json** | 宿主机守护进程，重启续计，按日/月输出 |
 | GPU | **pynvml** (NVIDIA) / 可选 AMD | 无 GPU 时优雅跳过 |
 | HTTP 上报 | **httpx** | 异步上报，支持重试 |
-| 容器 | Docker (network_mode: host + privileged) | 访问 /sys、vnstat 数据库 |
+| 容器 | Docker (network_mode: host + 最小 capability) | 访问 /sys、vnstat 数据库（SYS_PTRACE 可选） |
 
 ---
 
